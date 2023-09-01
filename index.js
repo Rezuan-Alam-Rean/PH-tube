@@ -33,11 +33,11 @@ const handleLoadNews = async (categoryId) => {
     const cardContainer = document.getElementById("card-container");
     cardContainer.innerHTML = "";
     if (data.data.length > 0) {
-        
-    data.data?.forEach((videos) => {
-        console.log(videos);
-        const div = document.createElement("div");
-        div.innerHTML = `
+
+        data.data?.forEach((videos) => {
+
+            const div = document.createElement("div");
+            div.innerHTML = `
      <div class="card bg-base-100 shadow-xl max-h-80 ">
     <figure>
       <img
@@ -77,11 +77,15 @@ const handleLoadNews = async (categoryId) => {
         
         `;
 
-        cardContainer.appendChild(div);
-    });
-} else {
-    document.getElementById("not-foun-container").style.display = "block";
-  }
+            cardContainer.appendChild(div);
+        });
+    } else {
+        document.getElementById("not-foun-container").style.display = "block";
+
+
+    }
+
+
 };
 
 
