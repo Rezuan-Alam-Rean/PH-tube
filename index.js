@@ -32,7 +32,8 @@ const handleLoadNews = async (categoryId) => {
 
     const cardContainer = document.getElementById("card-container");
     cardContainer.innerHTML = "";
-
+    if (data.data.length > 0) {
+        
     data.data?.forEach((videos) => {
         console.log(videos);
         const div = document.createElement("div");
@@ -78,6 +79,9 @@ const handleLoadNews = async (categoryId) => {
 
         cardContainer.appendChild(div);
     });
+} else {
+    document.getElementById("not-foun-container").style.display = "block";
+  }
 };
 
 
