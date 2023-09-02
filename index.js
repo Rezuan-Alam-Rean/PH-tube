@@ -75,10 +75,17 @@ const handleLoadNews = async (categoryId) => {
     
       
     </div>
-      
-      <p>
-      ${videos.others.views} views
-      </p>
+      <div class="flex gap-10">
+          
+           <p>
+             ${videos.others.views} views
+           </p>
+  
+        <div class="  bg-white">
+                 ${videos.others.posted_date} 
+        </div>
+
+       
     </div>
   </div> 
         
@@ -165,6 +172,11 @@ const handleViews = () => {
         <p>
         ${video.others.views} views
         </p>
+        <p>
+        ${video.others.posted_date} 
+        </p>
+
+         
       </div>
     </div> 
           
@@ -177,8 +189,6 @@ const handleViews = () => {
 
     });
 };
-
-
 
 
 
